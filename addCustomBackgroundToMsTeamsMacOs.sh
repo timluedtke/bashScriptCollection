@@ -1,5 +1,8 @@
 # Thanks to reddit user: /u/myers022/
 
+imagePath="~/"
+outputPath="~/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
+
 # Check if the output directory exists; if not, create it
 [[ ! -d "$outputPath" ]] && mkdir -p "$outputPath"
 
@@ -17,4 +20,5 @@ sips -z 1080 1920 "$image" --out "$outputPath/$guid.png"
 echo "Creating Background Thumbnail"
 thumbName="${guid}_thumb.png"
 sips -z 158 220 "$image" --out "$outputPath/$thumbName"
+
 done
